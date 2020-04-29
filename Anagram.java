@@ -25,10 +25,6 @@ public class Anagram {
          return false;
       }
       
-      if (s1 == 0) {
-         return true;
-      }
-      
       char[] arrayA = a.toCharArray();
       char[] arrayB = b.toCharArray();
       
