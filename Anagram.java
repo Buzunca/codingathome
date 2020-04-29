@@ -29,13 +29,8 @@ public class Anagram {
          return true;
       }
       
-      char[] arrayA = new char[s1];
-      char[] arrayB = new char[s2];
-      
-      for (int i = 0; i < s1; i++) {
-         arrayA[i] = a.charAt(i);
-         arrayB[i] = b.charAt(i);
-      }
+      char[] arrayA = a.toCharArray();
+      char[] arrayB = b.toCharArray();
       
       Arrays.sort(arrayA);
       Arrays.sort(arrayB);
