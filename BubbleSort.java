@@ -22,7 +22,11 @@ public class BubbleSort {
       
       int[] array5 = {};
       int[] expected5 = {};
-      testdriver(array5, expected5);  
+      testdriver(array5, expected5); 
+      
+      int[] array6 = {1, 2, 3, 4};
+      int[] expected6 = {1, 2, 3, 4};
+      testdriver(array6, expected6);  
    }
    
    public static void testdriver(int[] array, int[] expected) {
@@ -31,30 +35,23 @@ public class BubbleSort {
    }
    
    public static int[] bubbleSort(int[] a) {
-      boolean done = false;
+      boolean swapped = true;
       int length = a.length;
       int count = 0;
       
-      while (!done) {
-         count = 0;
+      while (swapped) {
+         swapped = false;
          
          for (int i = 0; i < length - 1; i++) {
             int temp = a[i];
             if (temp > a[i + 1]) {
                a[i] = a[i + 1];
                a[i + 1] = temp;
-               count = 0;
-            } else {
-               count++;
+               swapped  = true;
             }
-         }
-         
-         if (count == length - 1) {
-            done = true;
          }
       }
       
-      //System.out.println(Arrays.toString(a));
       return a;  
    }
 }
