@@ -36,13 +36,11 @@ public class BubbleSort {
    
    public static int[] bubbleSort(int[] a) {
       boolean swapped = true;
-      int length = a.length;
-      int count = 0;
       
       while (swapped) {
          swapped = false;
          
-         for (int i = 0; i < length - 1; i++) {
+         for (int i = 0; i < a.length - 1; i++) {
             int temp = a[i];
             if (temp > a[i + 1]) {
                a[i] = a[i + 1];
